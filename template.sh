@@ -23,4 +23,5 @@ touch app/core/database.py
 
 touch app/schemas/__init__.py
 touch app/schemas/ingestion.py
-touch app/schemas/chat.py
+touch app/services/chat.py
+
