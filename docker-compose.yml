@@ -20,6 +20,6 @@ services:
       - "8501:8501"
     command: ["uv", "run", "streamlit", "run", "frontend/ui.py", "--server.port=8501", "--server.address=0.0.0.0"]
     environment:
-      - API_URL=http://backend:8000/api/v1  # Tells frontend to talk to backend
+      - API_URL=http://backend:8000/api/v1  
     depends_on:
       - backend
