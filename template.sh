@@ -1,4 +1,5 @@
 mkdir -p app
+mkdir -p frontend
 mkdir -p app/core
 mkdir -p app/api
 mkdir -p app/api/v1
@@ -25,3 +26,4 @@ touch app/schemas/__init__.py
 touch app/schemas/ingestion.py
 touch app/services/chat.py
 
+touch frontend/ui.py

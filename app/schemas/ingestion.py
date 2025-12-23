@@ -19,7 +19,7 @@ def splitting(load):
     splitted_text = text_splitter.split_documents(load)
     return splitted_text
 
-def process_pdf(file_path: str, session_id: str):
+async def process_pdf(file_path: str, session_id: str):
  
     documents = load_pdf(file_path)
     text_chunks = splitting(documents)

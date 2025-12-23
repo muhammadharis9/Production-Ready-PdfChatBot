@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # The Backend API (FastAPI)
+  backend:
+    build: .
+    container_name: ragnite_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chroma_db_data:/app/chroma_db_data  # Persist the database!
+    env_file:
+      - .env
+
+  # The Frontend UI (Streamlit)
+  frontend:
+    build: .
+    container_name: ragnite_frontend
+    ports:
+      - "8501:8501"
+    command: ["uv", "run", "streamlit", "run", "frontend/ui.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    environment:
+      - API_URL=http://backend:8000/api/v1  # Tells frontend to talk to backend
+    depends_on:
+      - backend

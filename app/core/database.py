@@ -1,14 +1,13 @@
 import os
 from langchain_community.vectorstores import Chroma
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from app.core.config import settings
+from langchain_huggingface import HuggingFaceEmbeddings
+
 
 def get_embeddings():
+    model_name = HuggingFaceEmbeddings("sentence-transformers/all-MiniLM-L6-v2")
 
-    return GoogleGenerativeAIEmbeddings(
-        model="models/embedding-001", 
-        google_api_key=settings.GOOGLE_API_KEY
-    )
+    return model_name
 
 def get_vector_store(session_id: str):
 
