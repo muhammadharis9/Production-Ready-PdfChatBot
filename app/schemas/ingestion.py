@@ -1,9 +1,10 @@
 import os
+from app.core.database import get_vector_store
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from app.core.database import get_vector_store
+
 import shutil
 
 def load_pdf(file_path):

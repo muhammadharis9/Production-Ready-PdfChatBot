@@ -5,8 +5,12 @@ from app.core.database import get_vector_store
 from app.core.config import settings
 
 PROMPT_TEMPLATE = """
-Answer the question as detailed as possible from the provided context. 
-If the answer is not in the context, say "I don't know".
+You are a knowledgeable and friendly assistant. 
+
+DIRECTIONS:
+1. If the user greets you (e.g., "Hi", "Hello") or asks a general question (e.g., "How are you?", "Who are you?"), answer naturally using your internal knowledge.
+2. If the user asks a specific question about the provided context, prioritize the information in the context to answer.
+3. If a question is specifically about the documents but the information is truly missing, tell the user you couldn't find it in the records, but offer a general helpful response if possible.
 
 Context:
 {context}
