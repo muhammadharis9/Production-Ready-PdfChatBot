@@ -1,12 +1,12 @@
-# 💎 FileSense: Enterprise Document Intelligence
+# FileSense: Enterprise Document Intelligence
 
 **FileSense** is a production-ready **Retrieval-Augmented Generation (RAG)** application designed to transform how you interact with your data. Built with a modern **FastAPI** backend and a sleek, corporate-themed **Streamlit** frontend, FileSense allows you to upload PDFs and get precise, context-aware answers through a suite of specialized AI agents.
 
-
+![RAG architecture](./filesense.png)
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 * [What is RAG?](#-what-is-rag)
 * [Tech Stack](#-tech-stack)
 * [Key Features](#-key-features)
@@ -17,9 +17,15 @@
 
 ---
 
-## 🤖 What is RAG?
+Large Language Model (LLMs) are pre trained on the specific data or in broader term we can say that it was trained on the all data available on the internet but for instance, if you have your company's data or policies which wasn't shared on interned due to security reasons or others, that is where the **RAG (Retrieval-Augmented Generation)** comes into the picture. 
 
-If you are new to AI, **RAG (Retrieval-Augmented Generation)** is a technique that gives a Large Language Model (like Gemini) access to specific data it wasn't originally trained on—like your private company PDFs.
+If you want a brief idea about RAG, you can read my LinkedIn post:  
+[Brief intro to RAG on LinkedIn](https://www.linkedin.com/posts/muhammad-haris-imtiaz-026791222_retrievalaugmentedgeneration-rag-generativeai-activity-7387235134120542208-u6g_?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgAE94B1i-6pDD67E2x0VWtaOyhV_Kg-_0)
+
+
+## What is RAG?
+
+If you are new to AI, **RAG (Retrieval-Augmented Generation)** is a technique that gives a Large Language Model (like Gemini, Groq or others) access to specific data it wasn't originally trained on like your private company PDFs. 
 
 **How it works in FileSense:**
 1. **Ingestion:** You upload a PDF.
