@@ -75,7 +75,7 @@ FileSense/
 ├── Dockerfile            # Container definition
 └── docker-compose.yml    # Multi-service orchestration
 ```
-# FileSense Quick Start Guide
+# FileSense Guide
 
 Follow these steps to get your own instance of **FileSense** up and running in minutes.
 
@@ -107,4 +107,4 @@ uv run streamlit run ui.py
 ```
 Enjoy!
 
-# Developed by Muhammad Haris ❤️
+## Developed by Muhammad Haris ❤️
