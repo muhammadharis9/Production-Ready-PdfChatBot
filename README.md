@@ -74,7 +74,7 @@ FileSense/
 ├── pyproject.toml        # Environment & Dependencies
 ├── Dockerfile            # Container definition
 └── docker-compose.yml    # Multi-service orchestration
-
+```
 # FileSense Quick Start Guide
 
 Follow these steps to get your own instance of **FileSense** up and running in minutes.
@@ -96,15 +96,15 @@ Create a file named `.env` in the project root directory and add your API key:
 ```env
 GOOGLE_API_KEY=your_gemini_api_key_here
 OPENROUTER_API_KEY=your_openrouter_key_here
-
+```
 ## 3. Run the Backend
-
+```
 uv run uvicorn app.main:app --reload --port 8000
-
+```
 ## 4. Run the Frontend
-
+```
 uv run streamlit run ui.py
-
+```
 Enjoy!
 
 # Developed by Muhammad Haris ❤️
