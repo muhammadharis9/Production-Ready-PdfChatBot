@@ -37,28 +37,14 @@ async def process_pdf(file_path: str, session_id: str):
 
 def embeds(splitted_text):
     embedding_model = "sentence-transformers/all-MiniLM-L6-v2"
-    embed = HuggingFaceEmbeddings(model=embedding_model)
+    embed = HuggingFaceEmbeddings(model_name=embedding_model)
     PERSIST_DIR = "./chroma_db"
     final_embed = Chroma.from_documents(
         documents=splitted_text,
-        embedding=embed,
+        embedding_function=embed,
         collection_name="pdfs",
         persist_directory=PERSIST_DIR)
     
     return final_embed
     
 
-#If you want to load your own model then use the following function
- 
-def custom_embeds(load):
-    embedding_model1 = input("Please provide the model for embedding which you want to load: ")
-    embed = HuggingFaceEmbeddings(model=embedding_model)
-    
-    final_embed = Chroma.from_documents(
-        documents=splitted_text,
-        embedding=embed,
-        collection_name="pdfs",
-        persist_directory=PERSIST_DIR
-        )
-
-    return final_embed

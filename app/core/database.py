@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 
 
 def get_embeddings():
-    model_name = HuggingFaceEmbeddings("sentence-transformers/all-MiniLM-L6-v2")
+    model_name = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
     return model_name
 
