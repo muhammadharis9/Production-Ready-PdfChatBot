@@ -38,7 +38,7 @@ If you are new to AI, **RAG (Retrieval-Augmented Generation)** is a technique th
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **Frontend:** Streamlit (Custom "FileSense Blue" Theme)
 * **Backend:** FastAPI (High-performance Asynchronous Python)
@@ -49,7 +49,7 @@ If you are new to AI, **RAG (Retrieval-Augmented Generation)** is a technique th
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Specialized AI Agents:** Toggle between "Legal", "Finance", "HR", and more to refine the focus of your queries.
 * **Corporate UI:** A modern, high-contrast professional interface designed for enterprise usability.
@@ -59,7 +59,7 @@ If you are new to AI, **RAG (Retrieval-Augmented Generation)** is a technique th
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 FileSense/
@@ -74,3 +74,37 @@ FileSense/
 ├── pyproject.toml        # Environment & Dependencies
 ├── Dockerfile            # Container definition
 └── docker-compose.yml    # Multi-service orchestration
+
+# FileSense Quick Start Guide
+
+Follow these steps to get your own instance of **FileSense** up and running in minutes.
+
+---
+
+## 🛠 1. Prerequisites
+Before you begin, ensure you have the following installed:
+* **Python 3.10+**
+* **[uv](https://github.com/astral-sh/uv)** (Recommended for speed)
+* **Docker & Docker Compose** (Optional, for containerized setup)
+* **Google Gemini API Key** (Get it from [Google AI Studio](https://aistudio.google.com/))
+
+---
+
+## 2. Environment Configuration
+Create a file named `.env` in the project root directory and add your API key:
+
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+OPENROUTER_API_KEY=your_openrouter_key_here
+
+## 3. Run the Backend
+
+uv run uvicorn app.main:app --reload --port 8000
+
+## 4. Run the Frontend
+
+uv run streamlit run ui.py
+
+Enjoy!
+
+# Developed by Muhammad Haris ❤️
